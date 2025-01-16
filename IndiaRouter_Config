@@ -1,0 +1,12 @@
+
+# After DHCP is establish! 
+
+India_Router
+1.	Click India_Router.
+2.	Select the CLI tab.
+3.	Router>en
+4.	Router#config t
+5.	Router(config)#int g0/0
+6.	Router(config-if)#ip helper-address 10.1.1.1
+7.	Router(config-if)#end
+8.	Router#copy run st
