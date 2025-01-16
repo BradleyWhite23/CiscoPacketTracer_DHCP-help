@@ -1,1 +1,36 @@
-DHCP 
+DHCP establishing scope
+
+1.	Click the Server
+2.	Click Services
+3.	Click DHCP
+
+4.	Add the following IP scopes as shown below:
+
+Scope 0 (Server Pool Network - [UK])
+  Poolname: Server Pool
+    Default Gateway: 10.1.1.254
+      Start IP Address: 10.1.1.1
+        Subnet Mask: 255.255.0.0
+          Maximum Number of Users: 10
+
+Scope 1 (India_Router Network)
+  Poolname: India_Scope
+    Default Gateway: 172.16.1.254
+      DNS Server: 10.1.1.2
+        Start IP Address: 172.16.1.100
+          Subnet Mask: 255.255.0.0
+            Maximum Number of Users: 10
+
+Scope 2 (France_Router Network)
+  Poolname: France_Scope
+    Default Gateway: 192.168.1.254
+      DNS Server: 10.1.1.2
+        Start IP Address: 192.168.1.100
+          Subnet Mask: 255.255.255.0
+            Maximum Number of Users: 10
+
+To activate the DHCP service, you will need to switch it ON.
+
+## Troubleshooting ##
+Error - If Desktop is [Assigned APIPA] (Unsuccessful) 
+Result - Turn DHCP Off then On
